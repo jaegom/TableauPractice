@@ -68,7 +68,7 @@ font-size : 2vmax
 .amount {
   display: flex;
   width: 1440px;
-  background-color: white;
+  background-color: transparent;
   margin:auto;
   position:relative;
   bottom:-300px;
@@ -88,6 +88,7 @@ font-size : 2vmax
 }
 
 .main_text{
+ 
   width: 100%;
   height: 600px;
   margin-top:132px;
@@ -97,7 +98,7 @@ font-size : 2vmax
 .main_text > h1 {
   padding-top:250px;
   text-align: center;
-  background-color: skyblue;
+  background-color: transparent;
   
 }
 
