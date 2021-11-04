@@ -112,9 +112,43 @@ font-size : 2vmax
 
  }
 
- .explain1 > img {
+ .service > img {
   padding-left: 100px;
  }
+
+ .member {
+  display: flex;
+  width: 1440px;
+  background-color: transparent;
+  margin:auto;
+  position:relative;
+  
+}
+
+.member > li {
+  flex:1;
+  height: 132px;
+  background-color: white;
+}
+
+.member > li > div {
+  margin-top: 20px;
+  text-align: center;
+  background-color: blue;
+  color:white;
+}
+
+.service {
+  text-align: center;
+}
+
+.team {
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+}
 
 
 
