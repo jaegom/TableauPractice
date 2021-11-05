@@ -47,6 +47,7 @@
 
 .nav > li > a {
   color: white;
+  font-size:2vmin;
 }
 
 .title {
@@ -123,6 +124,7 @@ font-size : 2vmax
 
 
  .team {
+
   margin-top:132px;
   text-align: center;
 }
@@ -170,6 +172,12 @@ font-size : 2vmax
 .contact > ul > li > h4 > {
   margin-top: 20px;
 }
+
+/*
+
+1400px보다 width가 작아질 시 media 연동으로 화면 조정.
+
+*/
 
 
 
