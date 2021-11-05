@@ -112,42 +112,63 @@ font-size : 2vmax
 
  }
 
- .service > img {
-  padding-left: 100px;
+ .service {
+  margin-top:132px;
+  text-align: center;
+}
+
+.service > img {
+ margin-top: 100px;
  }
+
+
+ .team {
+  margin-top:132px;
+  text-align: center;
+}
 
  .member {
   display: flex;
   width: 1440px;
-  background-color: transparent;
+  background-color:transparent;
   margin:auto;
   position:relative;
-  
 }
+ .member > li {
+   flex:1;
+   background-color: transparent;
+ }
 
-.member > li {
-  flex:1;
-  height: 132px;
-  background-color: white;
-}
-
-.member > li > div {
+.member > li > h4 {
   margin-top: 20px;
   text-align: center;
   background-color: blue;
   color:white;
 }
 
-.service {
-  text-align: center;
+.member > li >img {
+  margin-top: 20px;
+  width: 134px;
+  height: 205px;
 }
 
-.team {
-  text-align: center;
+.member > li > ol {
+  margin-top: 60px;
+  text-align: left;
+  background-color: green;
 }
+
+
+
+
 
 .contact {
+  margin-top: 300px;
   text-align: center;
+}
+
+.contact > ul > li > h4 > {
+  margin-top: 20px;
 }
 
 
