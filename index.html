@@ -9,7 +9,7 @@
   <title>COVID-19 with Tableau</title>
 </head>
 
-<body>
+<body onload="sample();">
   <div class="wrap">
     <div class="intro_bg">
       <div class="header">
@@ -38,30 +38,22 @@
 
         <li>
           <div>실시간 일일 감염자수</div>
-          <div class="fire1">
-            <span id="covid_test">test</span>
-            <button onclick="sample();">sample</button>
-            
-            <!--<button onclick="sample();">sample</button>-->
-          </div>
+          <div id="covid_test1"></div>
           <!--공공데이터 api 위치-->
-
         </li>
+
         <li>
           <div>총 감염자수</div>
-          <div class="fire2">
-           </div>
+          <div id="covid_test2"></div>      
           <!--공공데이터 api 위치-->
-
         </li>
+
         <li>
           <div>총 사망자수</div>
-          <div class="fire3">
-    
-          </div>
+          <div id="covid_test3"></div>
           <!--공공데이터 api 위치-->
-
         </li>
+
       </ul>
     </div>
 
@@ -161,28 +153,38 @@
 </body>
 
 <script type="text/javascript">
-       //window.onload = function () {
-       //sample();
-  
+  //window.onload = function () {
+  //sample();
+
 
   function sample() {
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://api.corona-19.kr/korea/?serviceKey=j5TGELZBJhW7a93skxUPQMfYpFbHrdg8K");
-      xhr.send();        
-      xhr.onload = function() {
-          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status == 200) {
-              var response = JSON.parse(xhr.response);
-              var resUpdateTime = response.TotalCase;
-              
-              var obj = document.getElementById("covid_test");
-              obj.innerHTML = resUpdateTime;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.corona-19.kr/korea/?serviceKey=j5TGELZBJhW7a93skxUPQMfYpFbHrdg8K");
+    xhr.send();
+    xhr.onload = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status == 200) {
+        var response = JSON.parse(xhr.response);
 
-              setTimeout(function() {sample()}, 1000);
-              
-          }
+        var resUpdateTime1 = response.TotalCaseBefore;
+        var resUpdateTime2 = response.TotalCase;
+        var resUpdateTime3 = response.TotalDeath;
+        
+
+        var obj1 = document.getElementById("covid_test1");
+        obj1.innerHTML = resUpdateTime1;
+        var obj2 = document.getElementById("covid_test2");
+        obj2.innerHTML = resUpdateTime2;
+        var obj3 = document.getElementById("covid_test3");
+        obj3.innerHTML = resUpdateTime3;
+     
+     
+
+        setTimeout(function () { sample() }, 1000);
+
+
       }
+    }
   }
-  
 </script>
 
 </html>
