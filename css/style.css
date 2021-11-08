@@ -12,6 +12,7 @@
 .intro_bg {
   background-image: url(../images/bg1.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   width:100%;
   height:1000px;
 }
@@ -47,7 +48,7 @@
 
 .nav > li > a {
   color: white;
-  font-size:2vmin;
+  font-size:20px;
 }
 
 .title {
@@ -58,46 +59,50 @@
 
 .title > h1 {
 color: white;
-font-size : 6vmax
+font-size : 100px
 }
 
 .title > h4 {
   color: white;
-font-size : 2vmax
+font-size : 40px;
 }
 
 .amount {
   display: flex;
-  width: 1440px;
+  width: 100%;
   background-color: transparent;
   margin:auto;
   position:relative;
-  bottom:-300px;
+  bottom:opx;
 }
 
 .amount > li {
   flex:1;
   height: 132px;
-  background-color: white;
+  background-color:transparent;
+  padding-top: 50px;
 }
 
 .amount > li > div {
   margin-top: 20px;
   text-align: center;
-  background-color: blue;
+  font-size: x-large;
+  font-weight: bold;
+  background-color:transparent;
   color:white;
+  
 }
 
+
 .main_text{
- 
+  margin-top: 250px;
   width: 100%;
   height: 600px;
-  margin-top:132px;
-  background-color: transparent;
+  
+  background-color: aqua;
 }
 
 .main_text > h1 {
-  padding-top:250px;
   text-align: center;
   background-color: transparent;
   
@@ -114,7 +119,7 @@ font-size : 2vmax
  }
 
  .service {
-  margin-top:132px;
+  margin-top:250px;
   text-align: center;
 }
 
@@ -125,7 +130,7 @@ font-size : 2vmax
 
  .team {
 
-  margin-top:132px;
+  margin-top:250px;
   text-align: center;
 }
 
@@ -165,7 +170,7 @@ font-size : 2vmax
 
 
 .contact {
-  margin-top: 300px;
+  margin-top: 250px;
   text-align: center;
 }
 
