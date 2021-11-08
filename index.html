@@ -35,21 +35,30 @@
       </div>
 
       <ul class="amount">
+
         <li>
           <div>실시간 일일 감염자수</div>
-          <div>2,236명</div>
+          <div class="fire1">
+            <span id="covid_test">test</span>
+            <button onclick="sample();">sample</button>
+            
+            <!--<button onclick="sample();">sample</button>-->
+          </div>
           <!--공공데이터 api 위치-->
 
         </li>
         <li>
           <div>총 감염자수</div>
-          <div>100,000명</div>
+          <div class="fire2">
+           </div>
           <!--공공데이터 api 위치-->
 
         </li>
         <li>
           <div>총 사망자수</div>
-          <div>2012명</div>
+          <div class="fire3">
+    
+          </div>
           <!--공공데이터 api 위치-->
 
         </li>
@@ -110,7 +119,7 @@
           <li>
             <ol>
               <div class="teamexp1">-강원대학교</div>
-              <div class="teamexp1">-바이텍시스템 주임</div>
+              <div class="teamexp1">-바이텍씨스템 매니저</div>
             </ol>
           </li>
 
@@ -134,11 +143,11 @@
         <ul>
           <li>
             <h4>김선규</h4>
-            <h4>010-00000000</h4>
+            <h4>010-6378-3018</h4>
           </li>
           <li>
-            <h4></h4>
-            <h4>010-00001234</h4>
+            <h4>박재식</h4>
+            <h4>010-6305-8845</h4>
           </li>
         </ul>
       </div>
@@ -147,20 +156,34 @@
 
     </div>
 
-
-
-
-
   </div>
 
-
-
-
-
-
-  <script src="script.js"></script>
 </body>
 
+<script type="text/javascript">
+       //window.onload = function () {
+       //sample();
+  
+
+  function sample() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://api.corona-19.kr/korea/?serviceKey=j5TGELZBJhW7a93skxUPQMfYpFbHrdg8K");
+      xhr.send();        
+      xhr.onload = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status == 200) {
+              var response = JSON.parse(xhr.response);
+              var resUpdateTime = response.TotalCase;
+              
+              var obj = document.getElementById("covid_test");
+              obj.innerHTML = resUpdateTime;
+
+              setTimeout(function() {sample()}, 1000);
+              
+          }
+      }
+  }
+  
+</script>
 
 </html>
 
